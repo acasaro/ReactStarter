@@ -1,0 +1,306 @@
+// // Imports
+// @import 'partials/variables';
+// @import 'partials/mixins';
+// @import 'partials/buttons';
+// @import 'partials/headings';
+// @import 'partials/font-imports';
+// @import 'partials/icons';
+// @import 'partials/loaders';
+// @import 'partials/links';
+
+body {
+    margin: 0px;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ededed
+}
+
+a {
+    text-decoration: none;
+    font-size: .99rem;
+    font-weight: 500;
+    color: #2D4275;
+    letter-spacing: .01rem;
+}
+
+a:hover {
+    color: #266693;
+}
+/*
+========================================
+    FOOTER
+========================================
+*/
+footer {
+    width: 100%;
+    height: 48px;
+    border: 1px solid #ddd;
+    padding: 0 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #2d4275;
+    font-size: .8rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+ul.footer-links {
+    list-style-type: none;
+}
+
+ul.footer-links li {
+    display: inline;
+}
+
+.copyright {
+    text-align: right;
+    font-size: 10px;
+    line-height: 15px;
+    color: #6f6f6f;
+    align-self: center;
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    min-width: auto;
+}
+/*
+========================================
+    LOGIN COMPONENT
+========================================
+*/
+.login-container {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    max-height: 100%;
+}
+
+/*
+========================================
+    NAVIGATION BAR (public/secure)
+========================================
+*/
+.navbar-logo {
+    width: 64px;
+    margin: 30px 20px;
+}
+
+.navbar-nav {
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.navbar-nav li {
+    display: list-item;
+}
+
+.navbar-avatar {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    background-color: #fff;
+}
+
+.nav-link {
+    display: block;
+    padding: .5rem 1rem;
+}
+
+.hamburger {
+    float: left;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    padding: 1.5rem 1.2rem;
+}
+
+.hamburger-container {
+    height: 1.4rem;
+    position: relative;
+    width: 2rem;
+}
+
+.hamburger-bar {
+    background-color: #2D4275;
+    display: block;
+    height: .2rem;
+    left: 0;
+    opacity: 1;
+    position: absolute;
+    transform: rotate(0deg);
+    transition: background 0.5s cubic-bezier(0.17, 0.88, 0.1, 1.05) 0.2s, opacity 0.5s cubic-bezier(0.17, 0.88, 0.1, 1.05) 0.2s, top 0.5s cubic-bezier(0.17, 0.88, 0.1, 1.05) 0.2s, transform 0.5s cubic-bezier(0.17, 0.88, 0.1, 1.05) 0.2s, width 0.5s cubic-bezier(0.17, 0.88, 0.1, 1.05) 0.2s;
+    width: 2rem;
+}
+
+.hamburger-bar:nth-child(1) {
+    top: 0;
+}
+.hamburger-bar:nth-child(2) {
+    top: .6rem;
+}
+.hamburger-bar:nth-child(3) {
+    top: 1.2rem;
+}
+
+
+/*
+========================================
+    TOOLBAR MENU COMPONENT
+========================================
+*/
+.top-toolbar {
+    background: #fff;
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    border-bottom: 0.2rem solid #ededed;
+    height: 96px;
+    align-items: center;
+}
+
+.toolbar-icon {
+    padding-right: 35px;
+}
+
+/*
+========================================
+    FLEX GRID
+========================================
+*/
+.flex {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.flex-align-start {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    flex-direction: row;
+    display: flex;
+    max-height: 100%;
+    place-content: center flex-start;
+    align-items: center;
+    min-height: auto;
+    align-self: flex-end;
+}
+
+.flex-align-center {
+    flex: 1 1 100%;
+    box-sizing: border-box;
+    place-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+    max-height: 100%;
+}
+
+.flex-align-end {
+	flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    max-height: 100%;
+    place-content: flex-end;
+    align-items: center;
+}
+
+/*
+========================================
+    BOX COMPONENT STYLES
+========================================
+*/
+.box {
+    box-shadow: 0 3px 1px -2px
+    rgba(0,0,0,.2), 0 2px 2px 0
+    rgba(0,0,0,.14), 0 1px 5px 0
+    rgba(0,0,0,.12);
+}
+
+.box.login {
+    width: 304px;
+    padding: 24px;
+    border-radius: 2px;
+    background: #fff;
+    color: #000;
+}
+
+.box.login .title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.app-container {
+    margin: 0 1.3rem 0;
+}
+
+/*
+========================================
+    FORM ELEMENTS
+========================================
+*/
+input {
+    border: 0;
+    border-bottom: 0.1rem solid #2D4275;
+    box-sizing: border-box;
+    height: 1.9rem;
+    padding: 0;
+    font-size: 1rem;
+    margin-top: 0;
+    letter-spacing: 0;
+    color: #000;
+}
+
+input:focus {
+    border-bottom-color: #15D4F1;
+    box-shadow: none;
+    outline: none;
+}
+
+
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: #2D4275;
+    border: 0.2rem solid #2D4275;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    outline: none;
+    padding: .6rem 1rem;
+    position: relative;
+    transition: background 0.2s linear, border 0.2s linear, color 0.2s linear;
+    white-space: nowrap;
+    font-size: .9rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.feedback {
+    color: #202020;
+    margin-top: .4rem;
+    min-height: 1rem;
+}
+
+
+/*
+========================================
+    UTILITIES
+========================================
+*/
+.full-width {
+    width: 100%;
+}
